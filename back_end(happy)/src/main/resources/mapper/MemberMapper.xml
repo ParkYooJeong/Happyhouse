@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper file: 실행 할 쿼리 문을 저장하는 파일. 테이블 하나당 한개씩 작성
+namespace: 작업하는 테이블들을 구분해주기 위한 식별자 -->
+<mapper namespace="com.ssafy.happyhouse.mapper.MemberMapper">
+
+  <select id="check" parameterType="MemberDto" resultType="MemberDto">
+    select id,pass from member where id=#{id} and pass=#{pass}
+  </select>
+
+  <insert id="insert" parameterType="MemberDto">
+  	insert into member(id,name,pass,tel)  values(#{id}, #{name}, #{pass}, #{tel})
+  </insert>
+  
+  <select id="select" resultType="MemberDto">
+    select * from member 
+  </select>
+  
+  <select id="selectOne" parameterType="String">
+    delete from member where id = #{id}
+  </select>
+  
+  <update id="update" parameterType="MemberDto">
+  	update member set id=#{id},pass= #{pass},tel= #{tel},name= #{name} where id=#{id}
+  
+  </update>
+  
+  <select id="searchId" parameterType="String" resultType="MemberDto">
+    select  id, name, pass, tel from member where  id like #{name}
+  </select>
+  
+  <select id="searchName" parameterType="String" resultType="MemberDto">
+   select  id, name, pass, tel  from member where name like #{name}
+  </select>
+  
+</mapper>
+
+
+
+
+
+

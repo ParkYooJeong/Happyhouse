@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper file: 실행 할 쿼리 문을 저장하는 파일. 테이블 하나당 한개씩 작성 namespace: 작업하는 테이블들을 
+	구분해주기 위한 식별자 -->
+<mapper namespace="com.ssafy.happyhouse.mapper.BoardMapper">
+
+	<select id="selectAll" resultType="BoardDto">
+		select * from board order by
+		num desc
+	</select>
+
+	<delete id="delete" parameterType="String">
+		delete from board where num =
+		#{num}
+	</delete>
+
+	<select id="search" parameterType="String" resultType="BoardDto">
+		select *
+		from board where content like #{word} order by num desc
+	</select>
+	<select id="searchTitle" parameterType="String" resultType="BoardDto">
+		select *
+		from board where title like #{word} order by num desc
+	</select>
+	
+	<select id="selectOne" parameterType="String" resultType="BoardDto">
+		select *
+		from board where num = #{num}
+	</select>
+
+	<insert id="insert" parameterType="BoardDto">
+		insert into
+		board(name,wdate,title, content,count) values(#{name}, sysdate(),
+		#{title}, #{content}, 0)
+	</insert>
+
+	<update id="update" parameterType="BoardDto">
+		update board set content = #{content}, title = #{title}
+		where num=#{num}
+	</update>
+	
+	<update id="countUp" parameterType="String">
+		update board set count = count+1
+		where num = #{num}
+	</update>
+
+
+</mapper>
+
+
+
+
+
+

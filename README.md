@@ -44,7 +44,7 @@ DB : MySql
 
 - 부동산 관련 네이버 뉴스 크롤링
 
-![image](/uploads/bed4aa2efc2dccb15eafb0439e5e80d9/image.png)
+![메인페이지](/uploads/1767c8ab2690c67315055f23c33ea761/메인페이지.png)
 
 
 
@@ -53,19 +53,19 @@ DB : MySql
 * 공공 API를 사용하여 매물 정보 불러옴
 * 카카오맵 API를 사용하여 매물 위치에 마커와 매물정보를 함께 띄워줌
 
-![image](/uploads/53596f453e3ffdceead07e5a69f351af/image.png)
+![매물검색](/uploads/a65ffa61287867696af930404ac960dd/매물검색.png)
 
 
 
 #### 회원관리
 
-![image](/uploads/9b9d12a4d316861f98b38bce2712c1d8/image.png)
+![회원관리](/uploads/1dede993d181776bc2905ddb43935272/회원관리.png)
 
 
 
 #### 공지사항
 
-![image](/uploads/d90249608b26038184f4db34ed7ec651/image.png)
+![공지사항](/uploads/893c171edc68b2c2627dcb3ac26cf3b6/공지사항.png)
 
 
 
